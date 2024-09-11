@@ -10,4 +10,3 @@ Es un proyecto Simple de **HTML**, **CSS**, **JavaScript**.
 - JavaScript
 
 # calculadoraSosa
-# calculadoraSosa
