@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces&display=swap');
+
+/* Asegúrate de que el html y el body ocupen toda la altura de la ventana del navegador */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Contenedor principal del body */
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('img/fondo1.png'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contenedor de la calculadora y el pie de página */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Título de la calculadora */
+.titulo-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el título y la calculadora */
+}
+
+.titulo {
+    font-size: 2em;
+    color: #1CB698;
+    background: rgba(37, 42, 46, 0.8); /* Fondo semitransparente para suavizar el contraste con la imagen de fondo */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+}
+
+/* Calculadora */
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: 160px repeat(5, 80px);
+    background: #2a2f35; /* Fondo de la calculadora */
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    gap: 10px;
+}
+
+/* Display de la calculadora */
+.display {
+    grid-column: 1 / -1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #1e2326;
+    border-radius: 10px;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
+    color: #1CB698;
+    font-size: 2em;
+    overflow: hidden;
+    height: 120px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Botones */
+button {
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #1CB698;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+button:hover {
+    background-color: #1a9a85;
+}
+
+button:active {
+    background-color: #168c6b;
+    transform: scale(0.98);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Botones de columna y fila */
+.col-2 {
+    grid-column: span 2;
+}
+
+/* Estilos para botones de números */
+.numero {
+    background-color: #2d3e3b;
+}
+
+button.numero {
+    color: #ffffff;
+}
+
+/* Estilos para botones de operadores */
+.operador {
+    background-color: #ff5722;
+}
+
+button.operador {
+    color: #ffffff;
+}
+
+button.operador:hover {
+    background-color: #f11c1c;
+}
+
+button.operador:active {
+    background-color: #d84315;
+}
+
+/* Pie de página */
+footer {
+    background-color: rgba(37, 42, 46, 0.9); /* Fondo del pie de página con opacidad para suavizar la integración */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid #1e2326; /* Borde superior para separar el footer del contenido */
+    box-sizing: border-box;
+}
+
+/* Estilo para el año actual en el pie de página */
+#currentYear {
+    font-weight: bold;
+}
